@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Motiva Sans", Sans-serif;
+  color: #ffffff;
+  background: url('../img/common/background.png');
+  background-position-x: center;
+  background-position-y: top;
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(27, 40, 56);
+  height: auto;
+  -webkit-text-size-adjust: none;
+}
+body h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  padding-top: 2px;
+}
+.popup {
+  z-index: 200;
+  position: absolute;
+  box-shadow: 0 0 12px #000000;
+  color: #b8b6b4;
+  font-size: 11px;
+  background-color: #171a21;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+@media (min-width: 1224px) {
+  .home-page-content {
+    padding-left: 234px !important;
+  }
+}
+@media (min-width: 1442px) {
+  .home-page-content {
+    padding-right: 234px !important;
+  }
+}
+@media (min-width: 910px) {
+  .home-page-content {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+@media (min-width: 1224px) {
+  .background-holder {
+    right: -218px !important;
+  }
+}
+.home-page-content {
+  transition: padding 0.25s;
+  position: relative;
+  width: 940px;
+  padding: 0 16px;
+  margin: 0 auto;
+  max-width: 940px;
+}
+.left {
+  left: -46px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0) 95%);
+}
+.left:hover {
+  background: linear-gradient(to right, rgba(142, 192, 226, 0.3) 5%, rgba(0, 0, 0, 0) 95%);
+}
+.right {
+  right: -46px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.3) 95%);
+}
+.right:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(142, 192, 226, 0.3) 95%);
+}
+.arrow {
+  position: absolute;
+  top: 35%;
+  width: 23px;
+  height: 36px;
+  padding: 36px 11px;
+  cursor: pointer;
+  z-index: 3;
+}
+.carousel-thumb {
+  display: block;
+  text-align: center;
+  min-height: 37px;
+  padding-bottom: 4px;
+}
+.carousel-thumb > div {
+  display: inline-block;
+  margin: 12px 2px;
+  width: 15px;
+  height: 9px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  cursor: pointer;
+}
+.carousel-thumb > div:hover {
+  background-color: hsla(0, 0%, 100%, 0.4);
+}
+.carousel-container {
+  position: relative;
+}
+.btn-white-transparent {
+  border-radius: 2px;
+  border: none;
+  padding: 1px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  background: transparent;
+}
+.btn-white-transparent > span {
+  border-radius: 2px;
+  display: block;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff !important;
+}
+.btn-white-transparent > span:hover {
+  border: 1px solid #fff;
+}
+.btn-uppercase > span {
+  text-transform: uppercase;
+}
+.btn-small > span {
+  padding: 0 15px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.span-right {
+  float: right;
+  text-transform: none;
+  letter-spacing: normal;
+  display: inline;
+  position: relative;
+  top: -3px;
+}
