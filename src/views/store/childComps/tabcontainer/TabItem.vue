@@ -8,6 +8,12 @@
     </div>
     <div class="tab-item-content">
       <div class="tab-item-name">{{tabItem.name}}</div>
+      <div class="tab-item-details">
+        <span class="platform-img win"></span>
+        <div class="tab-item-top-tags">
+          <span class="top-tag" v-for="(tag, index) in tabItem.tags" :key="index">{{tag}}</span>
+        </div>
+      </div>
     </div>
   </a>
 </template>
@@ -114,5 +120,32 @@ export default {
 }
 .focus .tab-item-name {
   color: #10161b;
+}
+.tab-item-details {
+  color: #384959;
+  line-height: 20px;
+}
+.platform-img.win {
+  background-image: url('../../../../assets/img/platform/platform-win.png');
+}
+.focus > .tab-item-content > .tab-item-details > .platform-img.win {
+  background-image: url('../../../../assets/img/platform/platform-win-dark.png');
+}
+.platform-img {
+  vertical-align: bottom;
+  opacity: 0.3;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+.tab-item-top-tags {
+  height: 20px;
+  white-space: normal;
+  overflow: hidden;
+}
+.top-tag {
+  white-space: nowrap;
+  margin-right: 5px;
 }
 </style>

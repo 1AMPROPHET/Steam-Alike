@@ -8,7 +8,7 @@
         </a>
       </div>
       <tab-item 
-        v-for="(item, index) in tabItemList" 
+        v-for="(item, index) in tabItemList1" 
         :key="index" 
         :tabItem="item" 
         :currentIndex="currentIndex"
@@ -20,6 +20,7 @@
 
 <script>
 import TabItem from './TabItem.vue';
+import {tabItemList1} from './tabItemContent.js'
 export default {
   name: "HomeTabContent",
   components: {TabItem},
@@ -27,58 +28,7 @@ export default {
   data() {
     return {
       currentIndex: 0,
-      tabItemList: [
-        {
-          img: require('../../../../assets/img/newreleases/capsule1.jpg'),
-          finalPrice: 53,
-          name: 'Element TD 2 - Multiplayer Tower Defense',
-        },
-        {
-          img: require('../../../../assets/img/newreleases/capsule2.jpg'),
-          finalPrice: '免费',
-          name: 'Enderal: Forgotten Stories (Special Edition)'
-        },
-        {
-          img: require('../../../../assets/img/newreleases/capsule3.jpg'),
-          finalPrice: 70,
-          name: 'Totally Accurate Battle Simulator'
-        },
-        {
-          img: require('../../../../assets/img/newreleases/capsule4.jpg'),
-          finalPrice: 299,
-          name: 'OUTRIDERS'
-        },
-        {
-          img: require('../../../../assets/img/newreleases/capsule5.jpg'),
-          finalPrice: '免费',
-          name: 'OpenTTD'
-        },
-        {
-          img: require('../../../../assets/img/newreleases/capsule6.jpg'),
-          finalPrice: 198,
-          name: '双人成行'
-        },
-        {
-          img: require('../../../../assets/img/newreleases/capsule7.jpg'),
-          finalPrice: 67,
-          name: 'Summer~Life in the Countryside~'
-        },
-        {
-          img: require('../../../../assets/img/newreleases/capsule8.jpg'),
-          finalPrice: 49,
-          name: 'Succubus Farm'
-        },
-        {
-          img: require('../../../../assets/img/newreleases/capsule9.jpg'),
-          finalPrice: 70,
-          name: '末日准备狂'
-        },
-        {
-          img: require('../../../../assets/img/newreleases/capsule10.jpg'),
-          finalPrice: 99,
-          name: 'Endzone - A World Apart'
-        }
-      ]
+      tabItemList1: tabItemList1
     };
   },
   props: {},
@@ -86,6 +36,7 @@ export default {
     itemActive(index) {
       this.currentIndex = index;
       // console.log(this.currentIndex);
+      this.$emit('activeIndex', index)
     }
   },
 };

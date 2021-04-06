@@ -15,10 +15,10 @@
             </div>
           </div>
         </div>
-        <home-tab-content/>
+        <home-tab-content @activeIndex="activeIndex"/>
       </div>
       <div class="home-right-col">
-
+        <tab-preview-container :activeItemIndex="activeItemIndex"/>
       </div>
     </div>
   </div>
@@ -26,22 +26,27 @@
 
 <script>
 import HomeTabContent from './HomeTabContent.vue';
+import TabPreviewContainer from './TabPreviewContainer.vue';
 export default {
   name: "TabContainer",
-  components: {HomeTabContent},
+  components: {HomeTabContent, TabPreviewContainer},
   created() {},
   data() {
     return {
       tabsContent: [
         '新品与热门产品', '热销产品', '热门即将推出', '优惠'
       ],
-      currentIndex: 0
+      currentIndex: 0,
+      activeItemIndex: 0
     };
   },
   props: {},
   methods: {
     tabClick(index) {
       this.currentIndex = index
+    },
+    activeIndex(index) {
+      this.activeItemIndex = index
     }
   },
 };
