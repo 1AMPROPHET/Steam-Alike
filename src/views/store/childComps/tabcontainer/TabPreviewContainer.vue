@@ -15,6 +15,11 @@
       <div class="tags">
         <a href="" v-for="(tag, index) in item.tags" :key="index">{{tag}}</a>
       </div>
+      <div class="screen-shot" 
+        v-for="(screenshot, indey) in item.screenShots" 
+        :key="indey" 
+        :style="'background-image: url(' + screenshot.img + ')'">
+      </div>
     </div>
   </div>
 </template>
@@ -111,5 +116,13 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 11px;
+}
+.screen-shot {
+  width: 258px;
+  height: 134px;
+  margin-top: 3px;
+  background-size: cover;
+  background-position: center center;
+  padding: 8px;
 }
 </style>
